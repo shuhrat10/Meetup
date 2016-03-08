@@ -155,7 +155,7 @@ extension MainViewController: CLLocationManagerDelegate {
   func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
     let location = locations.last!
     
-    if location.horizontalAccuracy <= 10.0 {
+    if location.horizontalAccuracy <= 500.0 {
       locationManager.stopUpdatingLocation()
       self.userLocation = location
       authorization()
